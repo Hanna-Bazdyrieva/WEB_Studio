@@ -1,0 +1,38 @@
+//activities section 
+
+.activities {
+ 
+    @media screen and (max-width: calc($desktop - 1px)) {
+            display: none;
+    }
+
+    &__list {
+        @extend %list;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__thumb {
+        @extend %flexCenter;
+        position: relative;
+    }
+
+    &__info {
+        @extend %flexCenter;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 24%;
+
+        font-family: $robotoFont;
+        font-style: normal;
+        @include font(700, 14px, 1.14, 0.03em);
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $whiteColor;
+
+        background: rgba(47, 48, 58, 0.8);
+    }
+}

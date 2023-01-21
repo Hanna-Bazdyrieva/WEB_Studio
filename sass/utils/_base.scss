@@ -1,0 +1,109 @@
+body {
+
+    margin: 0;
+    font-family: $robotoFont;
+    font-style: normal;
+    @include font (null, 14px, 1.71, 0.03em);
+   
+    color: #757575;
+    background-color: #ffffff;
+}
+
+h2,
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+}
+
+.container {
+    // max-width: $mobile;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    // min-width: 320px;
+
+    @media screen and (min-width: $mobile) {
+        max-width: $mobile;
+    }
+    @media screen and (min-width: $tablet) {
+        max-width: $tablet;
+    }
+    @media screen and (min-width: $desktop) {
+        max-width: $desktop;
+    }
+
+}
+
+.section {
+    $sectionPaddingMob: 60px;
+    $sectionPaddingDesk: 94px;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: $sectionPaddingMob 0;
+
+    @media screen and (min-width: $desktop) {
+    padding: $sectionPaddingDesk 0;
+    }
+    &--no-padding {
+            padding-top: 0;
+        }
+    &--bg-secondary {
+        background-color: $paleGreyColor;
+    }
+}
+
+// .section {
+
+//     &--no-margin-bottom {
+//         margin-bottom: 0;
+//     }
+
+//     &--top-margin {
+//         margin-top: $sectionPadding;
+//     }
+
+   
+// }
+
+.title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @include font (700, 28px, 1.14, 0.03em);
+    text-align: center;
+
+    color: $titleTextColor;
+
+    &--hidden {
+        display: none;
+    }
+   
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+        @include font (700, 36px, 1.16, 0.03em);
+    }
+}
+
+.link {
+    display: block;
+    text-decoration: none;
+    font-style: normal;
+    outline: none;
+
+    color: $primaryTextColor;
+    transition: color $transitionTimeCubic;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+    }
+}

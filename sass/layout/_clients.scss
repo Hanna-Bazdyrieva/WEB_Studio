@@ -1,0 +1,42 @@
+//clients section
+.clients {
+
+    &__list {
+        @extend %list;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-right: -30px;
+    }
+    &__item {
+        width: calc((100% - 2*30px)/2);
+        height: 92px;
+        @media screen and (min-width: $tablet) {
+        width: calc((100% - 3*30px)/3);
+        }
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 6*30px)/6);
+        }
+    }
+    &__icon {
+        display: block;
+        fill: currentColor;
+    }
+}
+.clients__link {
+    @extend %flexCenter;
+    height: 100%;
+
+    color: $iconGrayColor;
+    border: 1px solid $iconGrayColor;
+    border-radius: 4px;
+
+    transition: color $transitionTimeCubic,
+    background-color $transitionTimeCubic;
+
+    &:hover,
+    &:focus {
+        color: $accentColor;
+        border-color: $accentColor;
+    }
+}

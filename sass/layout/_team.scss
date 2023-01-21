@@ -1,0 +1,68 @@
+//team section
+.team {
+    // display: flex;
+    // justify-content: space-between;
+   
+    background-color: $paleGreyColor;
+
+    @media screen and (min-width: $tablet) {
+            // margin-bottom: 30px;
+        }
+
+    &__list {
+        @extend %list;
+
+        @media screen and (min-width: $tablet) {
+            display: flex;
+            // justify-content: space-between;
+            flex-wrap: wrap;
+            // gap: 30px;
+            margin: -15px;
+        }
+    }
+    &__card {
+        width: 100%;
+        padding-bottom: 24px;
+        background-color: $whiteColor;
+        box-shadow: $basicShadow;
+        border-radius: 0px 0px 4px 4px;
+
+        @media screen and (max-width: $tablet) {
+            &:not(:last-of-type) {
+             margin-bottom: 30px;
+            } 
+        }
+        @media screen and (min-width: $tablet) {
+            width: calc((100% - 2*30px)/2);
+            margin: 15px;
+        }
+        @media screen and (min-width: $desktop) {
+            width: calc((100% - 4*30px)/4);
+            padding-bottom: 30px;
+        }
+    }
+    &__details {
+        padding-top: 30px;
+        padding-bottom: 16px;
+    }
+    &__name {
+        @include font (500, 16px, 1.19, 0.03em);
+        text-align: center;
+
+        color: $titleTextColor;
+    }
+    &__job {
+        padding-top: 10px;
+        @include font (null, 16px, 1.19, 0.03em);
+        text-align: center;
+        }
+    &__socials {
+        padding: 0 122px;
+    @media screen and (min-width: $tablet) {
+        padding: 0 74px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding: 0 32px;
+    }
+    }
+}
