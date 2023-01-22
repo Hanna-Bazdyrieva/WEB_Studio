@@ -7,6 +7,9 @@ body {
    
     color: #757575;
     background-color: #ffffff;
+    &.modal-open {
+        overflow: hidden;
+    }
 }
 
 h2,

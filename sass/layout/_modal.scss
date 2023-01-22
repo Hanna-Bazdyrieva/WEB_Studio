@@ -5,6 +5,7 @@
 
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     background-color: $backdropColor;
     transition: background-color $transitionTimeCubic, visibility var(--transition),
         opacity $transitionTimeCubic;
@@ -19,9 +20,18 @@
 
 .modal {
     position: absolute;
-    width: 528px;
-    height: 581px;
-
+    // width: 450px;
+    // height: 609px;
+    @media screen and (min-width: $mobile) {
+        // position: absolute;
+        width: 100%;
+        max-width: 450px;
+        height: 609px;
+    }
+    @media screen and (min-width: $desktop) {
+        width: 528px;
+        height: 581px;
+    }
     top: 50%;
     left: 50%;
     text-align: center;
@@ -34,11 +44,11 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     transition: transform $transitionTimeCubic,
-     opacity $transitionTimeCubic;
+        opacity $transitionTimeCubic;
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0.1);
-        opacity: 0.6;
+        opacity: 0.4;
     }
 }
 

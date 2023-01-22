@@ -4,14 +4,22 @@
         display: block;
         margin-bottom: 12px;
 
-        @include font (500, 20px, 1.15, 0.03em);
+        @include font (700, 20px, 1.5, 0.03em);
         color: $titleTextColor;
+
+        @media screen and (min-width: $desktop) {
+        @include font (700, 20px, 1.15, 0.03em);
+        }
     }
 
     &__container {
         display: flex;
         flex-direction: column;
-        width: 448px;
+        width: 370px;
+
+        @media screen and (min-width: $desktop) {
+            width: 448px;
+        }
     }
 
     &__label {
@@ -44,7 +52,7 @@
 .order__field {
     margin-bottom: 10px;
     height: 40px;
-    padding: 12px 12px 12px 42px;
+    padding: 11px 12px 11px 42px;
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -101,16 +109,21 @@
     }
 
     &::placeholder {
-        @include font (400, 12px, 1.17, 0.01em);
+        @include font (400, 14px, 1.14, 0.01em);
         color: rgba(117, 117, 117, 0.5);
-    }
-}
 
+        @media screen and (min-width: $desktop) {
+            @include font (400, 12px, 1.17, 0.01em);    }
+        }
+}
 
 .checkbox__label {
     @extend %flexCenter;
-    @include font (400, 14px, 1.71, 0.03em);
+    @include font (400, 12px, 1.17, 0.03em);
     color: $primaryTextColor;
+    @media screen and (min-width: $desktop) {
+    @include font (400, 14px, 1.71, 0.03em); 
+    }
 }
 
 .checkbox__wrap {
