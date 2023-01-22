@@ -1,0 +1,28 @@
+.logo {
+    @extend %link;
+    font-family: $ralewayFont;
+    @include font (700, 26px, 1.19, 0.03em);
+    color: $accentColor;
+
+    &--header {
+        display: flex;
+        align-items: center;
+        color: $accentColor;
+        transition: color $transitionTimeCubic;
+    }
+    &--footer {
+        text-align: center;
+        margin-bottom: 20px;
+        @media screen and (min-width: $desktop) {
+            text-align: start;
+        }
+    }
+}
+
+.logo__studio {
+    color: $titleTextColor;
+
+    &--footer {
+        color: $whiteColor;
+    }
+}
