@@ -42,7 +42,7 @@
         <ul class="header__contacts">
           <li class="header__element">
             <a class="header__note header__note--tel" href="mailto:info@devstudio.com">
-              <svg class="header__icon" width="16" height="12">
+              <svg class="header__icon header__icon--email" width="16" height="12">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -50,7 +50,7 @@
           </li>
           <li class="header__element">
             <a class="header__note header__note--email" href="tel:+380961111111">
-              <svg class="header__icon" width="10" height="16">
+              <svg class="header__icon header__icon--tel" width="10" height="16">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -128,10 +128,12 @@
     <main>
       <!-- Hero section -->
       <section class="hero section">
-        <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-        <button class="button hero__button" data-modal-open>
-          Замовити послугу
-        </button>
+       <div class="hero__wrap">
+          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+          <button class="button hero__button" data-modal-open>
+            Замовити послугу
+          </button>
+       </div>
       </section>
 
       <!--  Our priorities section  -->
@@ -200,7 +202,8 @@
             <li class="activities__item">
               <div class="activities__thumb">
                 <img
-                  src="./images/box1.jpg"
+                  srcset="./images/activities1-1x.jpg 1x, ./images/activities1-img-2x.jpg 2x"
+                  src="./images/activities1-1x.jpg"
                   alt="Розроблений алгоритм перетворюється на програмний код"
                   width="370"
                 />
@@ -212,7 +215,8 @@
             <li class="activities__item">
               <div class="activities__thumb">
                 <img
-                  src="./images/box2.jpg"
+                  srcset="/images/activities2-1x.jpg 1x, ./images/activities2-2x.jpg 2x"
+                  src='/images/activities2-1x.jpg'
                   alt="На ноутбуці розробляють мобільний застосунок"
                   width="370"
                 />
@@ -224,7 +228,8 @@
             <li class="activities__item">
               <div class="activities__thumb">
                 <img
-                  src="./images/box3.jpg"
+                  srcset="./images/activities3-1x.jpg 1x, ./images/activities3-2x.jpg 2x"
+                  src="./images/activities3-1x.jpg
                   alt="На графічному планшеті добирають кольори для дизайна"
                   width="370"
                 />
@@ -245,9 +250,10 @@
           <ul class="team__list">
             <li class="team__card">
               <img
-                src="./images/image1.jpg"
+                srcset="./images/team1-img-1x.jpg 1x, ./images/team1-img-2x.jpg 2x"
+                src="./images/team1-img-1x.jpg"
                 alt="Ігор Дем'яненко, фото"
-                width="270"
+                
               />
               <div class="team__details">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
@@ -286,7 +292,8 @@
             </li>
             <li class="team__card">
               <img
-                src="./images/image2.jpg"
+                srcset="./images/team2-img-1x.jpg 1x, ./images/team2-img-2x.jpg 2x"
+                src="./images/team2-img-1x.jpg"
                 alt="Ольга Рєпіна, фото"
                 width="270"
               />
@@ -327,7 +334,8 @@
             </li>
             <li class="team__card">
               <img
-                src="./images/image3.jpg"
+                srcset="./images/team3-img-1x.jpg 1x, ./images/team3-img-2x.jpg 2x"
+                src="./images/team3-img-1x.jpg"
                 alt="Микола Тарасов, фото"
                 width="270"
               />
@@ -368,7 +376,8 @@
             </li>
             <li class="team__card">
               <img
-                src="./images/image4.jpg"
+                srcset="./images/team4-img-1x.jpg 1x, ./images/team4-img-2x.jpg 2x"
+                src="./images/team4-img-1x.jpg"
                 alt="Михайло Єрмаков, фото"
                 width="270"
               />

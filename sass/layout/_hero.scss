@@ -1,25 +1,54 @@
 .hero {
-    padding-top: 118px;
-    padding-bottom: 118px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
-    // min-width: 320px;
+    min-width: 320px;
 
-    background-color: $hoverBtnColor;
-    background-image: $heroBackgroundGradient, $heroBackgroundImage;
+    background-image: $heroBackgroundGradient, 
+        url('/images/hero-bg-mob-1x.jpg');
     background-repeat: no-repeat;
     background-position: center;
-
-    @media screen and (min-width: $mobile) {
-        max-width: $mobile;
+    background-size: 480px 320px;
+    
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: $heroBackgroundGradient,
+         url('/images/hero-bg-mob-2x.jpg');
     }
+
     @media screen and (min-width: $tablet) {
         max-width: $tablet;
+        background-image: $heroBackgroundGradient,
+            url('/images/hero-bg-tab-1x.jpg');
+         background-size: 768px 320px;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: $heroBackgroundGradient,
+                url('/images/hero-bg-tab-2x.jpg');
+        }
     }
     @media screen and (min-width: $desktop) {
         max-width: 1600px;
         padding-top: 200px;
         padding-bottom: 200px;
-    }
+
+        background-image: $heroBackgroundGradient,
+            url('/images/hero-bg-1x.jpg');
+        background-size: 1600px 600px;
+        
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: $heroBackgroundGradient,
+                url('/images/hero-bg-2x.jpg');
+        }
+        }
+
+
     &__title {
         margin: 0 auto 20px auto;
         width: 360px;
