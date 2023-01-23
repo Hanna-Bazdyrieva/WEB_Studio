@@ -1,100 +1,129 @@
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    @extend %link;
+    font-family: $ralewayFont;
+    @include font (700, 26px, 1.19, 0.03em);
+
+    color: $accentColor;
+
+    &--header {
+        display: flex;
+        align-items: center;
+        color: $accentColor;
+        transition: color $transitionTimeCubic;
+    }
+
+    &--footer {
+        margin-bottom: 20px;
+    }
+}
+
+.logo__studio {
+    color: $titleTextColor;
+
+    &--footer {
+        color: $whiteColor;
+    }
+}
+
 .header {
     &__container {
-    position: relative;
-
-    display: flex;
-    border-bottom: 1px solid $headerBorderColor;
-    height: 60px;
-}
-    &__contacts {
-        @extend %list;
-        // display: flex;
-        // margin-left: auto;
-        // margin-right: 0;
+        position: relative;
+        display: flex;
+        border-bottom: 1px solid $headerBorderColor;
+        @media screen and (max-width: calc($tablet - 1px)) {
+                height: 60px;
+            }
     }
-    &__item:not(:last-of-type) {
-        margin-bottom: 32px;
-        // margin-left: 50px;
+
+    &__contacts {
+        @media screen and (max-width: calc($tablet - 1px)) {
+                display: none;
+            }
+        @extend %list;
+        display: flex;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    &__item:not(:first-of-type) {
+        margin-left: 50px;
     }
 
     &__note {
         @extend %link;
-
-        // display: flex;
-        // align-items: center;
-        // padding-top: 32px;
-        // padding-bottom: 32px;
-    }
-   
-    &__note--tel {
-        margin-bottom: 32px;
-        @include font (500, 34px, 1.12, 0.02em);
-        color: $accentColor;
-
-
-    }
-    &__note--email {margin-bottom: 64px;
-        @include font (500, 24px, 1.17, 0.02em);
-    }
-    &__icon {
-        display: none;
-        // display: flex;
-        // align-items: center;
-        // margin-right: 10px;
-
-        // fill: currentColor;
-    }
-}
-//         @include font (500, null, 1.14, 0.02em);
-//         // font-weight: 500;
-//         // line-height: 1.14;
-//         // letter-spacing: 0.02em;
-//         transition: color $transitionTimeCubic;
-//     }
-//     &__note:last-of-type {
-//         margin-left: 30px;
-//     }
-   
-// }
-.header__navigation {
-    @extend %list;
-
-    @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
-        margin-left: 93px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        @include font (500, null, 1.14, 0.02em);
+        // font-weight: 500;
+        // line-height: 1.14;
+        // letter-spacing: 0.02em;
+        transition: color $transitionTimeCubic;
+    }
+
+    &__note:last-of-type {
+        margin-left: 30px;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+
+        fill: currentColor;
     }
 }
 
+.header__navigation {
+    @media screen and (max-width: calc($tablet - 1px)) {
+        display: none;
+    }
 
+    @extend %list;
+    display: flex;
+    align-items: center;
+    margin-left: 93px;
 
-
-
+}
 
 .header__link {
     @extend %link;
-    @include font (500, 40px, 1.18, 0.02em);
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    @include font (500, 14px, 1.14, 0.02em);
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 1.14;
+    // letter-spacing: 0.02em;
+
     color: $titleTextColor;
-    transition: color $transitionTimeCubic; 
+    transition: color $transitionTimeCubic;
 
-    // position: relative;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
-
-//     @include font (500, 14px, 1.14, 0.02em);
     &--current {
         color: $accentColor;
-        margin-bottom: 36px;
     }
-//     &--current:after {
-//         content: " ";
-//         position: absolute;
-//         left: -2px;
-//         bottom: -1px;
-//         width: calc(100% + 4px);
-//         height: 4px;
 
-//         background-color: $accentColor;
-//         border-radius: 2px;
-    // }
+    &--current:after {
+        content: " ";
+        position: absolute;
+        left: -2px;
+        bottom: -1px;
+        width: calc(100% + 4px);
+        height: 4px;
+
+        background-color: $accentColor;
+        border-radius: 2px;
+    }
 }
+
+
+    
