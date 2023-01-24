@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
 }
-
 .logo {
     @extend %link;
     font-family: $ralewayFont;
@@ -16,12 +15,10 @@
         color: $accentColor;
         transition: color $transitionTimeCubic;
     }
-
     &--footer {
         margin-bottom: 20px;
     }
 }
-
 .logo__studio {
     color: $titleTextColor;
 
@@ -29,7 +26,6 @@
         color: $whiteColor;
     }
 }
-
 .header {
     &__container {
         position: relative;
@@ -89,8 +85,6 @@
         @extend %link;
         display: flex;
         align-items: center;
-        // padding-top: 32px;
-        // padding-bottom: 32px;
 
         @include font (500, 12px, 1.17, 0.02em);
        
@@ -122,10 +116,7 @@
             height: 16px;
         }
     }
-    
-
 }
-
 .header__link {
     @extend %link;
     position: relative;
@@ -136,10 +127,6 @@
 
     color: $titleTextColor;
     transition: color $transitionTimeCubic;
-
-    @include desktop {
-        @include font (null, 16px, 2, null);
-    }
     &--current {
         color: $accentColor;
     }
