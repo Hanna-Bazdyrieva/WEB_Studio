@@ -15,9 +15,7 @@
 }
 .menu__container {
     background-color: $whiteColor;
-    @include tablet {
-        display: none;
-    }
+  
     position: fixed;
     top: 0;
     left: 0;
@@ -26,6 +24,11 @@
     // height: 796px;
     text-align: start;
     z-index: 10;
+   
+
+    @include tablet {
+            display: none;
+        }
 
     &.is-hidden {
         display: none;
@@ -36,10 +39,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 480px;
+    width: 100vw;
     height: 100vh;
-    max-height: 796px;
     padding: 48px 80px 48px 40px;
+    @include mobile {
+        max-width: 480px;
+    }
 }
 .menu__btn-close {
     // margin: 10px 10px 10px auto;

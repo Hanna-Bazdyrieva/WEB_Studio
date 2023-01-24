@@ -456,10 +456,14 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 480px;
+  width: 100vw;
   height: 100vh;
-  max-height: 796px;
   padding: 48px 80px 48px 40px;
+}
+@media screen and (min-width: 480px) {
+  .menu__wrap {
+    max-width: 480px;
+  }
 }
 
 .menu__btn-close {
