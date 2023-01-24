@@ -7,27 +7,21 @@
     height: 91px;
     margin-bottom: 40px;
 
-    &__item:nth-child(2) {
-        margin: 0 8px 15px 8px;
-    } 
-    &__item:last-child {
-         margin-left: 8px;
-     }
-
-    @media screen and (min-width: $tablet) {
+    @media screen and (max-width: 767px) {
+        &__item:nth-child(2) {
+         margin: 0 8px 15px 8px;}
+        &__item:last-child {
+         margin-left: 8px;}
+    }
+   
+    @include tablet {
         width: 575px;
         height: 54px;
         margin: 0 auto 30px auto;
-        justify-content: center;
+        justify-content: space-between;
     }
-    @media screen and (min-width: $desktop) {
+    @include desktop {
         margin: 0 auto 50px auto;
-    }
-  
-    // width: 1170px;
-
-    &__item + &__item {
-        // margin-left: 8px;
     }
 }
 

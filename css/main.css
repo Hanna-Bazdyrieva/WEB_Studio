@@ -1123,18 +1123,20 @@ img {
   height: 91px;
   margin-bottom: 40px;
 }
-.filter__item:nth-child(2) {
-  margin: 0 8px 15px 8px;
-}
-.filter__item:last-child {
-  margin-left: 8px;
+@media screen and (max-width: 767px) {
+  .filter__item:nth-child(2) {
+    margin: 0 8px 15px 8px;
+  }
+  .filter__item:last-child {
+    margin-left: 8px;
+  }
 }
 @media screen and (min-width: 768px) {
   .filter {
     width: 575px;
     height: 54px;
     margin: 0 auto 30px auto;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1142,6 +1144,7 @@ img {
     margin: 0 auto 50px auto;
   }
 }
+
 .filter__button {
   padding: 6px 22px;
   font-weight: 500;
