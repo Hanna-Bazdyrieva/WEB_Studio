@@ -1,7 +1,8 @@
 .menu__btn-open {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+    // position: absolute;
+    // right: 10px;
+    // top: 10px;
+    margin: 10px 10px 10px auto;
     z-index: 5;
     display: inline-flex;
     padding: 0;
@@ -16,13 +17,13 @@
     background-color: $whiteColor;
     @include tablet {
         display: none;
-}
+    }
     position: fixed;
     top: 0;
     left: 0;
     width: 101%;
     margin: 0 -1px;
-    height: 796px;
+    // height: 796px;
     text-align: start;
     z-index: 10;
 
@@ -41,6 +42,7 @@
     padding: 48px 80px 48px 40px;
 }
 .menu__btn-close {
+    // margin: 10px 10px 10px auto;
     position: absolute;
     right: 10px;
     top: 10px;

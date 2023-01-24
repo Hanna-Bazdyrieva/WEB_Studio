@@ -1,54 +1,71 @@
 .hero {
     display: flex;
+    max-width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    // min-width: 320px;
+    @include tablet {
+        max-width: $tablet;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @include desktop {
+        max-width: 1600px;
+    }
+   }
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    min-width: 320px;
 
-    background-image: $heroBackgroundGradient, 
-        url('/images/hero-bg-mob-1x.jpg');
+    background-color: $accentColor;
+    background-image: $heroBackgroundGradient,
+        url('../images/hero-bg-mob-1x.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 480px 320px;
-    
+    background-size: cover;
+    flex-grow: 1;
+    padding: 118px 60px;
+
     @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
         background-image: $heroBackgroundGradient,
-         url('/images/hero-bg-mob-2x.jpg');
-    }
+            url('../images/hero-bg-mob-2x.jpg');}
 
     @media screen and (min-width: $tablet) {
-        max-width: $tablet;
         background-image: $heroBackgroundGradient,
-            url('/images/hero-bg-tab-1x.jpg');
-         background-size: 768px 320px;
-        
+            url('../images/hero-bg-tab-1x.jpg');
+        padding: 118px 204px;
+
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             background-image: $heroBackgroundGradient,
-                url('/images/hero-bg-tab-2x.jpg');
+                url('../images/hero-bg-tab-2x.jpg');
         }
     }
     @media screen and (min-width: $desktop) {
-        max-width: 1600px;
+        // max-width: 1600px;
         padding-top: 200px;
         padding-bottom: 200px;
 
         background-image: $heroBackgroundGradient,
             url('/images/hero-bg-1x.jpg');
-        background-size: 1600px 600px;
-        
+        // background-size: 1600px 600px;
+
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
             background-image: $heroBackgroundGradient,
                 url('/images/hero-bg-2x.jpg');
         }
-        }
-
-
+    }
+}
+.hero {
     &__title {
         margin: 0 auto 20px auto;
         width: 360px;
