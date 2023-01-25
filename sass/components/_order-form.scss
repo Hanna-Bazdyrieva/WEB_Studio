@@ -41,12 +41,7 @@
         flex-direction: column;
     }
 
-    &__agreement-link {
-        @extend %link;
-        margin-left: 4px;
-        color: $accentColor;
-        text-decoration: underline;
-    }
+   
 
     &__button {
         margin: 30px auto 0 auto;
@@ -123,7 +118,7 @@
 }
 
 .checkbox__label {
-    @extend %flexCenter;
+    // @extend %flexCenter;
     @include font (400, 12px, 1.17, 0.03em);
     color: $primaryTextColor;
     @media screen and (min-width: $desktop) {
@@ -134,9 +129,8 @@
     // }
 }
 
-.checkbox__wrap {
-    @extend %flexCenter;
-    
+.checkbox__icon {
+display: inline-block;
     width: 16px;
     height: 15px;
     margin-right: 8px;
@@ -145,7 +139,8 @@
     border-radius: 2px;
 
     transition: background-color $transitionTimeCubic,
-        border-color $transitionTimeCubic;
+    border-color $transitionTimeCubic;
+    fill: currentColor;
 
     .checkbox__field:hover+&,
     .checkbox__field:focus+& {
@@ -158,9 +153,14 @@
     }
 }
 
-.checkbox__icon {
-    fill: currentColor;
-}
+ .checkbox__agreement-link {
+     @extend %link;
+     display: inline;
+   
+     margin-left: 4px;
+     color: $accentColor;
+     text-decoration: underline;
+ }
 
 .order__agreement-span {
     display: block;
