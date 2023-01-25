@@ -35,6 +35,10 @@
      }
 }
 .menu__wrap {
+    @media screen and (max-width: 480px) {
+        padding: 48px 20px;
+    }
+
     position: relative;
     display: flex;
     flex-direction: column;
@@ -85,9 +89,13 @@
 .menu__note {
     @extend %link;
     &--tel {
+        @media screen and (max-width: 480px) {
+            @include font (500, 30px, 1.12, 0.01em);
+        }
         margin-bottom: 32px;
         @include font (500, 34px, 1.12, 0.02em);
         color: $accentColor;
+
     }
     &--email {
         margin-bottom: 64px;
@@ -100,11 +108,14 @@
 
 // SOCIALS
 .menu__social-list {
-    @extend %list;
-    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+
+    @extend %list;
+    width: 100%;
+    
 
 }
 .menu__soc-item {

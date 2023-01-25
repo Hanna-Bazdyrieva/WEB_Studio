@@ -460,6 +460,11 @@ img {
   height: 100vh;
   padding: 48px 80px 48px 40px;
 }
+@media screen and (max-width: 480px) {
+  .menu__wrap {
+    padding: 48px 20px;
+  }
+}
 @media screen and (min-width: 480px) {
   .menu__wrap {
     max-width: 480px;
@@ -502,6 +507,14 @@ img {
   letter-spacing: 0.02em;
   color: #2196f3;
 }
+@media screen and (max-width: 480px) {
+  .menu__note--tel {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+  }
+}
 .menu__note--email {
   margin-bottom: 64px;
   font-weight: 500;
@@ -511,10 +524,11 @@ img {
 }
 
 .menu__social-list {
-  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
 }
 
 .menu__soc-item {
