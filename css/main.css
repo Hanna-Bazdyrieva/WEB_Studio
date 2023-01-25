@@ -400,7 +400,7 @@ img {
 
 .checkbox__icon {
   display: inline-block;
-  width: 16px;
+  min-width: 16px;
   height: 15px;
   margin-right: 8px;
   color: #ffffff;
