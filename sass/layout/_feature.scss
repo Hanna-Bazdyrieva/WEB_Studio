@@ -56,5 +56,9 @@
         text-transform: uppercase;
 
         color: $titleTextColor;
+        @include tablet {
+            text-align: start;
+            
+        }
     }
 }
