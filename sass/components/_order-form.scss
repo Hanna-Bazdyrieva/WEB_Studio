@@ -27,6 +27,7 @@
     }
 
     &__label {
+        
 
         margin-bottom: 4px;
 
@@ -116,9 +117,9 @@
             @include font (400, 12px, 1.17, 0.01em);    }
         }
 }
-
+// checkbox----
 .checkbox__label {
-    // @extend %flexCenter;
+    @extend %flexCenter;
     @include font (400, 12px, 1.17, 0.03em);
     color: $primaryTextColor;
     @media screen and (min-width: $desktop) {

@@ -4,7 +4,7 @@
   list-style: none;
 }
 
-.clients__link, .activities__info, .activities__thumb, .feature__wrap, .order__icon-wrap, .socials__link, .button {
+.clients__link, .activities__info, .activities__thumb, .feature__wrap, .checkbox__label, .order__icon-wrap, .socials__link, .button {
   display: flex;
   justify-content: center;
   align-items: center;

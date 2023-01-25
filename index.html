@@ -746,22 +746,23 @@
               placeholder="Введіть текст"
             ></textarea>
           </div>
+        <label class="checkbox__label" for="agreement">
+            <input
+              class="checkbox__field visually-hidden"
+              id="agreement"
+              type="checkbox"
+              name="agreement"
+              value="agreed"
+            />
 
-          <input
-            class="checkbox__field visually-hidden"
-            id="agreement"
-            type="checkbox"
-            name="agreement"
-            value="agreed"
-          />
-
-          <svg class="checkbox__icon" width="16" height="15">
-            <use href="./images/icons.svg#icon-check"></use>
-          </svg>
-          <label class="checkbox__label" for="agreement">
-            Погоджуюся з розсилкою та приймаю
-           
+            <svg class="checkbox__icon" width="16" height="15">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+            <span class="checkbox__text-wrap">
+              Погоджуюся з розсилкою та приймаю
+            
               <a class="checkbox__agreement-link" href=""> Умови договору</a>
+            </span>
             
           </label>
           <button class="order__button button" type="submit">Відправити</button>
