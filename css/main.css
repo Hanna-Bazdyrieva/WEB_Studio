@@ -290,7 +290,12 @@ img {
 .order__container {
   display: flex;
   flex-direction: column;
-  width: 370px;
+  width: 100%;
+}
+@media screen and (min-width: 480px) {
+  .order__container {
+    width: 370px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .order__container {
@@ -527,7 +532,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -700,7 +705,6 @@ img {
   display: flex;
   max-width: 100%;
   padding: 0;
-  margin: 0 auto;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -708,6 +712,7 @@ img {
     max-width: 768px;
     padding-left: 15px;
     padding-right: 15px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -721,6 +726,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   background-color: #757575;
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 59, 0.4)), url("../images/hero-bg-mob-1x.jpg");
   background-repeat: no-repeat;
@@ -765,20 +771,19 @@ img {
 }
 
 .hero__title {
+  width: 100%;
   margin: 0 auto 20px auto;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.61;
   letter-spacing: 0.06em;
-  width: 360px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
 }
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 480px) {
   .hero__title {
-    min-width: 320px;
-    max-width: 360px;
+    width: 360px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -901,7 +906,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .team__card:not(:last-of-type) {
     margin-bottom: 30px;
   }
@@ -1117,6 +1122,7 @@ img {
 
 .modal {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   text-align: center;

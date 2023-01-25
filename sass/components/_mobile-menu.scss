@@ -111,12 +111,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     @extend %list;
     width: 100%;
-    
-
 }
 .menu__soc-item {
     display: inline-block;

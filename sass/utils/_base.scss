@@ -48,14 +48,12 @@ img {
 }
 
 .section {
-    $sectionPaddingMob: 60px;
-    $sectionPaddingDesk: 94px;
         margin-top: 0;
         margin-bottom: 0;
-        padding: $sectionPaddingMob 0;
+        padding: 60px 0;
 
     @media screen and (min-width: $desktop) {
-    padding: $sectionPaddingDesk 0;
+    padding: 94px 0;
     }
     &--no-padding {
             padding-top: 0;

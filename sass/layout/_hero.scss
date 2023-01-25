@@ -2,13 +2,14 @@
     display: flex;
     max-width: 100%;
     padding: 0;
-    margin: 0 auto;
+    // margin: 0 auto;
     width: 100%;
     // min-width: 320px;
     @include tablet {
         max-width: $tablet;
         padding-left: 15px;
         padding-right: 15px;
+        margin: 0 auto;
     }
     @include desktop {
         max-width: 1600px;
@@ -20,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     background-color: $primaryTextColor;
     background-image: $heroBackgroundGradient,
@@ -72,10 +74,11 @@
 }
 .hero {
     &__title {
+        width: 100%;
+        
         margin: 0 auto 20px auto;
-        @media screen and (max-width: 479px) {
-            min-width: 320px;
-            max-width: 360px;
+        @include mobile {
+            width: 360px;
         }
         @include font (900, 26px, 1.61, 0.06em);
         @include desktop {
@@ -84,7 +87,7 @@
 
             @include font (900, 44px, 1.35, 0.06em);
         }
-        width: 360px;
+        
         text-align: center;
         text-transform: uppercase;
 
