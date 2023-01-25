@@ -21,14 +21,19 @@
     justify-content: center;
     align-items: center;
 
-    background-color: $accentColor;
+    background-color: $primaryTextColor;
     background-image: $heroBackgroundGradient,
         url('../images/hero-bg-mob-1x.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     flex-grow: 1;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    
+    @include mobile {
     padding: 118px 60px;
+    }
 
     @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -36,7 +41,7 @@
         background-image: $heroBackgroundGradient,
             url('../images/hero-bg-mob-2x.jpg');}
 
-    @media screen and (min-width: $tablet) {
+    @include tablet {
         background-image: $heroBackgroundGradient,
             url('../images/hero-bg-tab-1x.jpg');
         padding: 118px 204px;
@@ -48,7 +53,7 @@
                 url('../images/hero-bg-tab-2x.jpg');
         }
     }
-    @media screen and (min-width: $desktop) {
+    @include desktop {
         // max-width: 1600px;
         padding-top: 200px;
         padding-bottom: 200px;
@@ -68,19 +73,22 @@
 .hero {
     &__title {
         margin: 0 auto 20px auto;
-        width: 360px;
-
+        @media screen and (max-width: 479px) {
+            min-width: 320px;
+            max-width: 360px;
+        }
         @include font (900, 26px, 1.61, 0.06em);
+        @include desktop {
+            margin: 0 auto 30px auto;
+            width: 696px;
+
+            @include font (900, 44px, 1.35, 0.06em);
+        }
+        width: 360px;
         text-align: center;
         text-transform: uppercase;
 
         color: $whiteColor;
-
-        @media screen and (min-width: $desktop) {
-        margin: 0 auto 30px auto;
-        width: 696px;
-
-        @include font (900, 44px, 1.35, 0.06em);}
     }
         &__button {
         margin-left: auto;
