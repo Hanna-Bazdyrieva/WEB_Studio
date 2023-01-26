@@ -1,10 +1,8 @@
 .hero {
     display: flex;
-    // max-width: 100%;
     padding: 0;
-    // margin: 0 auto;
     width: 100%;
-    // min-width: 320px;
+   
     @include tablet {
         max-width: $tablet;
         margin: 0 auto;
@@ -31,7 +29,7 @@
     padding-bottom: 118px;
     
     @include mobile {
-    padding: 118px 60px;
+    padding: 118px 0;
     }
 
     @media (min-device-pixel-ratio: 2),
@@ -43,7 +41,7 @@
     @include tablet {
         background-image: $heroBackgroundGradient,
             url('../images/hero-bg-tab-1x.jpg');
-        padding: 118px 204px;
+        // padding: 118px 0;
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
@@ -54,12 +52,10 @@
     }
     @include desktop {
         // max-width: 1600px;
-        padding-top: 200px;
-        padding-bottom: 200px;
+        padding: 200px 0;
 
         background-image: $heroBackgroundGradient,
             url('../images/hero-bg-1x.jpg');
-        // background-size: 1600px 600px;
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
