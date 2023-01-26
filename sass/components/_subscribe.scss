@@ -1,9 +1,14 @@
 .subscribe {
-   
-    &__form {
-        // display: flex;
-        
+@media screen and (max-width: calc($tablet - 1px)) {
+        widt: 100%
     }
+    @include desktop {
+        width: 207px;
+    }
+    &__form {
+        @media screen and (max-width: calc($tablet - 1px)) {
+        widt: 100%
+        }}
 }
 
 .subscribe__input {

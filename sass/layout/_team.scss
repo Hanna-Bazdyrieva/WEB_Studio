@@ -1,13 +1,6 @@
 //team section
 .team {
-    // display: flex;
-    // justify-content: space-between;
-   
     background-color: $paleGreyColor;
-
-    @media screen and (min-width: $tablet) {
-            // margin-bottom: 30px;
-        }
 
     &__list {
         @extend %list;
